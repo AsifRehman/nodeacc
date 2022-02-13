@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Imran Cloth Design Management System</title>
+
+</head>
+
+<body>
+    <script>
+        function gotoQuality() {
+            var v = document.getElementsByName('title')[0].value; 
+            window.location.href = "/dno/q/" + v;
+        }
+
+        function gotoDNo() {
+            var v = document.getElementsByName('author')[0].value; 
+            window.location.href = "/dno/" + v;
+        }
+    </script>
+
+    <div class="container">
+        <h1 class="mb-4 text-white">Search Design</h1>
+
+        <form>
+            <div class="form-group">
+
+                <label for="title" class="text-white">Quality Title</label>
+                <input type="text" class="form-control" placeholder="Title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="gotoQuality()" class="btn btn-primary">Search Quality</button>
+            </div>
+        </form>
+
+        <form>
+            <div class="form-group">
+
+                <label for="author" class="text-white">DNo</label>
+                <input type="text" class="form-control" placeholder="DNo" name="author" required>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="gotoDNo()" class="btn btn-primary">Search DNo</button>
+            </div>
+        </form>        
+    </div>
+
+</body>
+
+</html>
